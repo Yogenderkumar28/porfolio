@@ -1,0 +1,82 @@
+/* ---------------- */
+/*      Footer      */
+/* ---------------- */
+
+.footer {
+    background-color: rgb(10, 4, 22);
+    bottom: 0 !important;
+    padding-top: 10px !important;
+    padding-bottom: 8px !important ;
+  }
+  .footer-copywright {
+    text-align: center !important;
+  }
+  
+  .footer-body {
+    z-index: 1;
+    text-align: center !important;
+  }
+  
+  @media (max-width: 767px) {
+    .footer-copywright {
+      text-align: center !important;
+    }
+  
+    .footer-body {
+      text-align: center !important;
+    }
+  }
+  
+  .footer h3 {
+    font-size: 1em;
+    color: white !important;
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+  }
+  .footer-icons {
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+    padding: 0 !important;
+  }
+  
+  .blockquote-footer {
+    color: #a588c0 !important;
+  }
+
+
+/* -------------- */
+/*     About      */
+/* -------------- */
+  
+  .tech-icons {
+    font-size: 4.5em !important;
+    margin: 15px !important;
+    padding: 10px !important;
+    opacity: 0.93 !important;
+    border: 1.7px solid rgba(252, 163, 17, 0.637) !important;
+    vertical-align: middle !important;
+    text-align: center !important;
+    border-radius: 5px !important;
+    display: table !important;
+    box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+    overflow: hidden !important;
+    transition: all 0.4s ease 0s !important;
+  }
+  
+  @media (max-width: 767px) {
+    .tech-icons {
+      margin: 10px !important;
+      color: aliceblue !important;
+    }
+  }
+  
+  .tech-icons:hover {
+    transform: scale(1.05) !important;
+    overflow: hidden !important;
+    border: 2.2px solid rgba(252, 163, 17, 0.883) !important;
+  }
+
+  .tech-icon-images {
+    padding: 20px !important;
+    line-height: 1.6 !important;
+  }
