@@ -10,6 +10,7 @@ import {
   AiOutlineHome,
   AiOutlineUser,
 } from "react-icons/ai";
+import { FaUniversity } from "react-icons/fa";
 import { CgFileDocument } from "react-icons/cg";
 import MenuItem from "@mui/material/MenuItem";
 import styled from "@emotion/styled";
@@ -99,6 +100,15 @@ const Navbar = () => {
                 startIcon={<AiOutlineUser />}
               >
                 <Text>About</Text>
+              </UserButton>
+            </Box>
+            <Box item>
+              <UserButton
+                href="/education"
+                variant="text"
+                startIcon={<FaUniversity />}
+              >
+                <Text>Education</Text>
               </UserButton>
             </Box>
             <Box item>
