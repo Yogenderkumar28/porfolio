@@ -61,10 +61,9 @@ const Navbar = () => {
     }
   `;
 
-  const NavBar = styled(AppBar)({
-    backgroundColor: "#020614",
-    boxShadow: "none",
-  });
+  const NavBar = styled(AppBar)`
+    background-color: #020614;
+  `;
 
   const Text = styled(Typography)`
     font-size: 18px;
@@ -72,12 +71,7 @@ const Navbar = () => {
   `;
 
   return (
-    <NavBar
-      position={position ? "sticky" : "static"}
-      aria-expanded={expand}
-      fixed="top"
-      expand="md"
-    >
+    <NavBar position="sticky" aria-expanded={expand} fixed="top" expand="md">
       <Container maxWidth="xl" sx={{ marginTop: "5px" }}>
         <Toolbar>
           <Box>

@@ -63,46 +63,76 @@ const Education = () => {
               </span>
             </HeadingText>
           </Grid>
-          <Grid item>
+          <Grid item mb="2rem">
             <VerticalTimeline>
               <VerticalTimelineElement
                 className="vertical-timeline-element--education"
-                contentStyle={{ background: "#e91e63", color: "#fff" }}
+                contentStyle={{ background: "#00547E", color: "#fff" }}
                 contentArrowStyle={{
-                  borderRight: "7px solid  #e91e63",
+                  borderRight: "7px solid #00547E",
                 }}
-                date="November 2012"
-                iconStyle={{ background: "#e91e63", color: "#fff" }}
+                date="Aug 2019 - Present"
+                iconStyle={{ background: "#00547E", color: "#fff" }}
                 icon={<MdSchool />}
                 position="right"
               >
                 <h3 className="vertical-timeline-element-title">
-                  Agile Development Scrum Master
+                  Bachelor Of Technology
                 </h3>
                 <h4 className="vertical-timeline-element-subtitle">
-                  Certification
+                  <span style={{ color: "#fca311", fontWeight: "600" }}>
+                    {" "}
+                    Delhi Technological University, New Delhi
+                  </span>
                 </h4>
-                <p>Creative Direction, User Experience, Visual Design</p>
+                <h5 className="vertical-timeline-element-subtitle">
+                  Branch : Electrical Engineering
+                </h5>
+                <p>CGPA - 8.75 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--education"
-                contentStyle={{ background: "#e91e63", color: "#fff" }}
+                contentStyle={{ background: "#00547E", color: "#fff" }}
                 contentArrowStyle={{
-                  borderRight: "7px solid  #e91e63",
+                  borderRight: "7px solid  #00547E",
                 }}
-                date={22}
-                iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+                date="2018 - 2019"
+                iconStyle={{ background: "#00547E", color: "#fff" }}
                 icon={<MdSchool />}
                 position="left"
               >
                 <h3 className="vertical-timeline-element-title">
-                  Bachelor of Science in Interactive Digital Media Visual
-                  Imaging
+                  12th Standard
                 </h3>
                 <h4 className="vertical-timeline-element-subtitle">
-                  Bachelor Degree
+                  <span style={{ color: "#fca311", fontWeight: "600" }}>
+                    {" "}
+                    Kendriya Vidyalaya Sainik Vihar, New Delhi
+                  </span>
                 </h4>
-                <p>Creative Direction, Visual Design</p>
+                <p>Percentage - 92.6%</p>
+              </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className="vertical-timeline-element--education"
+                contentStyle={{ background: "#00547E", color: "#fff" }}
+                contentArrowStyle={{
+                  borderRight: "7px solid  #00547E",
+                }}
+                date="2016 - 2017"
+                iconStyle={{ background: "#00547E", color: "#fff" }}
+                icon={<MdSchool />}
+                position="right"
+              >
+                <h3 className="vertical-timeline-element-title">
+                  10th Standard
+                </h3>
+                <h4 className="vertical-timeline-element-subtitle">
+                  <span style={{ color: "#fca311", fontWeight: "600" }}>
+                    {" "}
+                    Kendriya Vidyalaya Sainik Vihar, New Delhi
+                  </span>
+                </h4>
+                <p>CGPA - 10</p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}

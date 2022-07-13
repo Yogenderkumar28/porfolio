@@ -40,7 +40,7 @@ const About = () => {
         display="flex"
         flexDirection="column"
       >
-        <Grid item>
+        <Grid item mt="3rem">
           <HeadingText variant="h3" gutterBottom>
             Professional{" "}
             <span style={{ color: "#fca311", fontWeight: "600" }}>
