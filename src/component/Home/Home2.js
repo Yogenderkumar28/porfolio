@@ -46,6 +46,8 @@ const Home2 = () => {
           display="flex"
           flexDirection="column"
           alignItems="left !important"
+          pl="4rem"
+          pr="4rem"
         >
           <HeadingText variant="h3" gutterBottom>
             LET ME <span style={{ color: "#fca311" }}>INTRODUCE</span> MYSELF

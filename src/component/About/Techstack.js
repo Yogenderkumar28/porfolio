@@ -13,22 +13,22 @@ const Techstack = () => {
   return (
     <Grid container xs={12}>
       <Grid item xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus color="whitesmoke" />
+        <CgCPlusPlus color="#fca311" />
       </Grid>
       <Grid item xs={4} md={2} className="tech-icons" color="whitesmoke">
-        <DiJavascript1 />
+        <DiJavascript1 color="#fca311" />
       </Grid>
       <Grid item xs={4} md={2} className="tech-icons">
-        <DiNodejs color="whitesmoke" />
+        <DiNodejs color="#fca311" />
       </Grid>
       <Grid item xs={4} md={2} className="tech-icons">
-        <DiReact color="whitesmoke" />
+        <DiReact color="#fca311" />
       </Grid>
       <Grid item xs={4} md={2} className="tech-icons">
-        <DiMongodb color="whitesmoke" />
+        <DiMongodb color="#fca311" />
       </Grid>
       <Grid item xs={4} md={2} className="tech-icons">
-        <DiGit color="whitesmoke" />
+        <DiGit color="#fca311" />
       </Grid>
     </Grid>
   );

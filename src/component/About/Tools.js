@@ -14,19 +14,19 @@ const Tools = () => {
   return (
     <Grid container xs={12}>
       <Grid item xs={4} md={2} className="tech-icons">
-        <SiGithub color="whitesmoke" />
+        <SiGithub color="#fca311" />
       </Grid>
       <Grid item xs={4} md={2} className="tech-icons" color="whitesmoke">
-        <SiBootstrap color="whitesmoke" />
+        <SiBootstrap color="#fca311" />
       </Grid>
       <Grid item xs={4} md={2} className="tech-icons">
-        <SiVisualstudiocode color="whitesmoke" />
+        <SiVisualstudiocode color="#fca311" />
       </Grid>
       <Grid item xs={4} md={2} className="tech-icons">
-        <SiMaterialui color="whitesmoke" />
+        <SiMaterialui color="#fca311" />
       </Grid>
       <Grid item xs={4} md={2} className="tech-icons">
-        <SiFigma color="whitesmoke" />
+        <SiFigma color="#fca311" />
       </Grid>
     </Grid>
   );

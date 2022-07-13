@@ -82,12 +82,12 @@ const Navbar = () => {
             />
           </Box>
           <Grid container justifyContent="flex-end">
-            <Box item>
+            <Box item mr="0.5rem">
               <UserButton href="/" variant="text" startIcon={<AiOutlineHome />}>
                 <Text>Home</Text>
               </UserButton>
             </Box>
-            <Box item>
+            <Box item mr="0.5rem">
               <UserButton
                 href="/about"
                 variant="text"
@@ -96,7 +96,7 @@ const Navbar = () => {
                 <Text>About</Text>
               </UserButton>
             </Box>
-            <Box item>
+            <Box item mr="0.5rem">
               <UserButton
                 href="/education"
                 variant="text"
@@ -105,7 +105,7 @@ const Navbar = () => {
                 <Text>Education</Text>
               </UserButton>
             </Box>
-            <Box item>
+            <Box item mr="0.5rem">
               <UserButton
                 href="/projects"
                 variant="text"
@@ -114,7 +114,7 @@ const Navbar = () => {
                 <Text>Projects</Text>
               </UserButton>
             </Box>
-            <Box item>
+            <Box item mr="0.5rem">
               <UserButton
                 href="/Resume"
                 variant="text"
