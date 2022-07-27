@@ -11,8 +11,16 @@ import { Grid } from "@mui/material";
 
 const Techstack = () => {
   return (
-    <Grid container xs={12}>
-      <Grid item xs={4} md={2} className="tech-icons">
+    <Grid container xs={12} justifyContent="center">
+      <Grid
+        item
+        xs={4}
+        md={2}
+        className="tech-icons"
+        justifyContent="center"
+        alignItems="center"
+        display="flex"
+      >
         <CgCPlusPlus color="#fca311" />
       </Grid>
       <Grid item xs={4} md={2} className="tech-icons" color="whitesmoke">

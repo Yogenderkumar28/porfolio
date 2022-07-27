@@ -17,6 +17,7 @@ const Home = () => {
     font-size: 3rem;
     font-weight: 600;
   `;
+
   return (
     <>
       <Grid
@@ -24,6 +25,7 @@ const Home = () => {
         justifyContent={"center"}
         direction={{ xs: "column", md: "row" }}
         sx={{ pt: "5rem", pb: "1rem" }}
+        zIndex="1000"
       >
         <Grid item padding="10vh" xs={6}>
           <Text variant="h1">
@@ -45,7 +47,9 @@ const Home = () => {
           <img src={homeMain} alt="home pic" style={{ maxHeight: "450px" }} />
         </Grid>
       </Grid>
-      <Home2 />
+      <Grid container>
+        <Home2 />
+      </Grid>
     </>
   );
 };

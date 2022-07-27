@@ -31,6 +31,8 @@ const Footer = () => {
       sx={{ pt: "1rem", pb: "1rem" }}
       bgcolor="#020614"
       justifyContent="space-evenly"
+      position="relative"
+      bottom="0"
     >
       <Grid item>
         <FooterText variant="h5">

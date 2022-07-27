@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Grid, Typography } from "@mui/material";
-import aboutImg from "../../assets/about.png";
+import aboutImg from "../../assets/about2.svg";
 import AboutCard from "./AboutCard";
 import Techstack from "./Techstack";
 import Tools from "./Tools";
@@ -24,11 +24,7 @@ const About = () => {
           <AboutCard />
         </Grid>
         <Grid item xs={4}>
-          <img
-            src={aboutImg}
-            alt="Myimage"
-            style={{ maxHeight: "450px", margin: "auto" }}
-          />
+          <img src={aboutImg} alt="Myimage" style={{ maxHeight: "450px" }} />
         </Grid>
       </Grid>
       <Grid

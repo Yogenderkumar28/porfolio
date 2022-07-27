@@ -3,7 +3,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
-
+import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
 import {
   AiOutlineFundProjectionScreen,
@@ -12,29 +12,78 @@ import {
 } from "react-icons/ai";
 import { FaUniversity } from "react-icons/fa";
 import { CgFileDocument } from "react-icons/cg";
-import MenuItem from "@mui/material/MenuItem";
+import Hamburger from "hamburger-react";
 import styled from "@emotion/styled";
 import logo from "../assets/logo.png";
-import { Grid, Typography } from "@mui/material";
+import {
+  Grid,
+  IconButton,
+  ListItemIcon,
+  Menu,
+  MenuItem,
+  Typography,
+  Link,
+} from "@mui/material";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
+import { style } from "@mui/system";
 
 const Navbar = () => {
-  const [expand, updateExpanded] = useState(false);
-  const [position, updatePosition] = useState(false);
+  const pages = [
+    {
+      icon: <AiOutlineHome />,
+      text: "Home",
+    },
+    {
+      icon: <AiOutlineUser />,
+      text: "About",
+    },
+    {
+      icon: <FaUniversity />,
+      text: "Education",
+    },
+    {
+      icon: <AiOutlineFundProjectionScreen />,
+      text: "Projects",
+    },
+    {
+      icon: <CgFileDocument />,
+      text: "Resume",
+    },
+  ];
+  const [isOpenMenu, setOpenMenu] = useState(false);
+  const [anchorElNav, setAnchorElNav] = useState(null);
+  const navigate = useNavigate();
 
-  function scrollHandler() {
-    if (window.scrollY >= 20) {
-      updatePosition(true);
-    } else {
-      updatePosition(false);
+  const handleOpenNavMenu = (event) => setAnchorElNav(event.currentTarget);
+  const handleCloseNavMenu = () => setAnchorElNav(null);
+
+  const handleNavigationAction = (page) => {
+    switch (page.text) {
+      case "Home":
+        navigate("/");
+        break;
+
+      case "About":
+        navigate("/about");
+        break;
+      case "Education":
+        navigate("/education");
+        break;
+      case "Projects":
+        navigate("/projects");
+        break;
+      case "Resume":
+        navigate("/resume");
+        break;
+      default:
+        break;
     }
-  }
-
-  window.addEventListener("scroll", scrollHandler);
+  };
 
   const UserButton = styled(Button)`
     text-transform: none;
     color: white;
-    padding: 6px 12px !important;
+    padding: 6px 10px !important;
     &::before {
       content: "";
       position: absolute;
@@ -68,13 +117,107 @@ const Navbar = () => {
   const Text = styled(Typography)`
     font-size: 18px;
     font-weight: 500;
+    margin: 2px;
+  `;
+
+  const MenuItemDiv = styled(MenuItem)`
+    background-color: #fca311;
+    border-radius: 1rem;
   `;
 
   return (
-    <NavBar position="sticky" aria-expanded={expand} fixed="top" expand="md">
-      <Container maxWidth="xl" sx={{ marginTop: "5px" }}>
-        <Toolbar>
-          <Box>
+    <NavBar position="sticky" width={100}>
+      {/* <Container maxWidth="xl" sx={{ marginTop: "5px" }}> */}
+      <Toolbar
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          padding: "0.5rem",
+        }}
+      >
+        <Box>
+          <Link component={RouterLink} sx={{ textDecoration: "none" }} to="/">
+            <img
+              src={logo}
+              alt="logo"
+              style={{ width: "60px", marginLeft: "2vw" }}
+            />
+          </Link>
+        </Box>
+        <Box sx={{ display: { xs: "none", md: "flex" } }}>
+          {pages.map((page) => (
+            <UserButton
+              key={page.text}
+              onClick={() => {
+                handleNavigationAction(page);
+              }}
+              sx={{
+                color: "inherit",
+                display: "flex",
+              }}
+              variant="text"
+              startIcon={page.icon}
+            >
+              <Text ml={0.2}>{page.text}</Text>
+            </UserButton>
+          ))}
+        </Box>
+        <Box sx={{ display: { xs: "flex", md: "none", color: "#fca311" } }}>
+          <IconButton
+            aria-label="menu"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleOpenNavMenu}
+            color="inherit"
+          >
+            {/* <Hamburger
+              toggled={isOpenMenu}
+              rounded
+              onToggle={setOpenMenu(!isOpenMenu)}
+            /> */}
+            <MenuIcon />
+          </IconButton>
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorElNav}
+            anchorOrigin={{
+              vartical: "top",
+              horizontal: "right",
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "right",
+            }}
+            open={Boolean(anchorElNav)}
+            onClose={handleCloseNavMenu}
+            sx={{
+              display: { xs: "flex", md: "none" },
+              mt: "70px",
+              ml: "0px",
+            }}
+          >
+            {pages.map((page) => (
+              <UserButton>
+                <MenuItemDiv
+                  key={page.text}
+                  onClick={() => {
+                    handleNavigationAction(page);
+                    handleCloseNavMenu();
+                  }}
+                  sx={{
+                    width: "93vw",
+                  }}
+                  // backgrounColor="#020614"
+                >
+                  <ListItemIcon>{page.icon}</ListItemIcon>
+                  <Text>{page.text}</Text>
+                </MenuItemDiv>
+              </UserButton>
+            ))}
+          </Menu>
+        </Box>
+        {/* <Box>
             <img
               src={logo}
               alt="logo"
@@ -123,9 +266,9 @@ const Navbar = () => {
                 <Text>Resume</Text>
               </UserButton>
             </Box>
-          </Grid>
-        </Toolbar>
-      </Container>
+          </Grid> */}
+      </Toolbar>
+      {/* </Container> */}
     </NavBar>
   );
 };

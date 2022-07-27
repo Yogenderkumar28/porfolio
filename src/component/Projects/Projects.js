@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import { Typography, Grid } from "@mui/material";
 import ProjectCard from "./ProjectCard";
-import home from "../../assets/home-bg.jpg";
+import Project1 from "../../assets/Project1.png";
 
 const Projects = () => {
   const HeadingText = styled(Typography)`
@@ -40,7 +40,7 @@ const Projects = () => {
       <Grid container xs={10} margin="auto" display="flex" flexDirection="row">
         <Grid item className="project-card" md={4}>
           <ProjectCard
-            imgPath={home}
+            imgPath={Project1}
             title="Community Question Asking Platform"
             description="Developed a community-based platform where anyone can ask question and get best answer. It is basically a knowledge sharing platform."
             ghLink="https://github.com/Yogenderkumar28/engi-Zone"
@@ -49,7 +49,7 @@ const Projects = () => {
         </Grid>
         <Grid item className="project-card" md={4}>
           <ProjectCard
-            imgPath={home}
+            imgPath={Project1}
             title="Community Question Asking Platform"
             description="Developed a community-based platform where anyone can ask question and get best answer. It is basically a knowledge sharing platform."
             ghLink="https://github.com/Yogenderkumar28/engi-Zone"
@@ -58,7 +58,7 @@ const Projects = () => {
         </Grid>
         <Grid item className="project-card" md={4}>
           <ProjectCard
-            imgPath={home}
+            imgPath={Project1}
             title="Community Question Asking Platform"
             description="Developed a community-based platform where anyone can ask question and get best answer. It is basically a knowledge sharing platform."
             ghLink="https://github.com/Yogenderkumar28/engi-Zone"

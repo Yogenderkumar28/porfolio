@@ -12,7 +12,7 @@ import { Box } from "@mui/system";
 
 const Tools = () => {
   return (
-    <Grid container xs={12}>
+    <Grid container xs={12} justifyContent="center">
       <Grid item xs={4} md={2} className="tech-icons">
         <SiGithub color="#fca311" />
       </Grid>
